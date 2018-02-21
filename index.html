@@ -315,7 +315,7 @@ var animationSetup = false;
    self.updateClock = function() {
     timerIndex--;
     if (timerIndex == -1) {
-      timerIndex = 8;
+      timerIndex = 5;
       gameIndex++;
     } 
  
@@ -324,7 +324,7 @@ var animationSetup = false;
       // end the game
       self.runEndOfGame();
       return;
-    } else if(timerIndex == 8){
+    } else if(timerIndex == 5){
       self.setupUserInterfaceWithData();
     }
     // Display updated time
@@ -345,7 +345,7 @@ var animationSetup = false;
     // Correct answer
     if (actualCorrectAnswerIndex == answerIndex) {
       rightAnswer.play();
-      actualScore += 10;
+      actualScore += 20;
       scoreSpan[0].textContent = actualScore;
       cancelButtons = true;
       self.dispatch_modal('YOUR ANSWER IS: <span class="correct">CORRECT!</span>', 1000);
