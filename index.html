@@ -2,7 +2,7 @@
 <html>
   <head>
       <script>
-        alert("YasserHoot — Yasser's Trivia: A Trivia Game For The Dogs");
+        alert("YasserHoot — Yasser's Trivia: A Trivia Game For The Dogs.");
       </script>
     <title>YasserHoot — Yasser's Trivia</title>
     <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,400italic,500,500italic,700,700italic|Roboto:400,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css">
@@ -16,9 +16,7 @@ body{
   font-family: "Roboto Mono", Roboto, sans-serif;
   font-weight: 400;
 }
-
 /* Stage Structure Styles */
-
 #stage {
   width: 100%;
   height: 100%;
@@ -27,32 +25,26 @@ body{
   position: fixed;
   top:0;
 }
-
 #container {
   padding: 30px;
 }
-
 #gameContainer h1 {
   text-align: center;
   font-size: 54px;
   padding: 0;
   color: #fff;
 }
-
 #gameHeader {
   display: none;
   padding: 0 20px;
 }
-
 /* Core Game Element Styles */
 #gameChoices {
   display: none;
 }
-
 .container {
   padding:20px;
 }
-
 #gameChoices button {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   line-height: 32px;
@@ -71,17 +63,14 @@ body{
   font-family: "Roboto Mono", Roboto, sans-serif;
   font-weight: 400;
 }
-
 #gameChoices button:hover {
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.26), 0 4px 15px 0 rgba(0, 0, 0, 0.26);
   background-color:#ff6a3c;
 }
-
 .left {
   float: left;
   display: block;
 }
-
 .questions {
   width: 68%;
   background-color: #000;
@@ -90,12 +79,10 @@ body{
   margin-right: 2%;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
-
 .questions span {
   color: #ff5722;
   font-size: 26px;
 }
-
 .timer {
   width: 15%;
   background-color: #f4b400;
@@ -106,7 +93,6 @@ body{
   font-size: 26px;
   color: #fff;
 }
-
 .score {
   width: 13%;
   background-color: #fff;
@@ -116,9 +102,7 @@ body{
   color: #ff5722;
   font-size: 26px;
 }
-
 .half {width: 50%;}
-
 #startButton {
   background-color: #f4b400;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -134,12 +118,10 @@ body{
   font-family: "Roboto Mono", Roboto, sans-serif;
   font-weight: 400;
 }
-
 #startButton:hover {
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.26), 0 4px 15px 0 rgba(0, 0, 0, 0.26);
   background-color: #ffc728;
 }
-
 /* Modal Window Styles */
 #modal_window{
   position: absolute;
@@ -152,23 +134,18 @@ body{
   display: none;
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.26);
 }
-
 .modal_message{
   padding:10px 20px;
 }
-
 .modal_message p {
   color:#fff;
 }
-
 .modal_message h2 {
   color: #fff;
 }
-
 .modal_message span {
   float: right;
 }
-
 .modal_message div button {
   margin-bottom: 20px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -188,34 +165,27 @@ body{
   font-family: "Roboto Mono", Roboto, sans-serif;
   font-weight: 400;
 }
-
 .modal_message div button:hover {
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.26), 0 4px 15px 0 rgba(0, 0, 0, 0.26);
   background-color: #ff6a3c;
 }
-
 .modal_message div button.twitter {
   background-color: #55acee;
   margin-right: 38px;
 }
-
 .modal_message div button.twitter:hover {
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.26), 0 4px 15px 0 rgba(0, 0, 0, 0.26);
   background-color: #83c3f3
 }
-
 .modal_message span.correct {
   color:#4caf50;
 }
-
 .modal_message span.incorrect {
   color:#f44336;
 }
-
     </style>   
     <script>
 var animationSetup = false;
-
  function animationPipeline() {
    
    /* Variables */
@@ -252,30 +222,40 @@ var animationSetup = false;
     'The acronym CSS means what?',
     'The acronym PHP means what?',
     'Who was the creator of Git?',
+    'Django is a web framework for what language?',
+    'Which one of these is a CSS preprocessor?',
+    'A JavaScript catch block is written how?',
+    'What is the function of CSS on a website?',
+    'What does the &#60;b&#62; tag do in HTML?',
+    'What language was GSAP originally written in?',
+    'What type of file is a SVG file?'
    ],
    answers = [
     ['Cool Style Sheets', 'Crummy Style Sheets', 'Cascading Style Sheets', 'c'],
     ['PHP: Hypertext Preprocessor', 'Personal Hypertext Preprocessor', 'PHP', 'c'],
     ['Steve Jobs', 'Linus Torvalds', 'Steven Seagal', 'c'],
+    ['Ruby', 'JavaScript', 'PHP', 'c'],
+    ['HTML', 'React', 'SASS', 'c'],
+    ['catch(Exception $e){}', 'catch(Exception e){}', 'except Exception as inst', 'c'],
+    ['Markup web pages', 'Output data to a client', 'Used to describe look and format of markup', 'c'],
+    ['Break to a new line', 'Insert server data', 'Bold Text', 'c'],
+    ['VBScript', 'ActionScript', 'Silverlight', 'c'],
+    ['Bitmap', 'Vector', 'Raster', 'c']
    ],
-   correctAnswers = [2,0,1],
+   correctAnswers = [2,0,1,2,2,2,2,2,1,1],
    gameAnswers = [];
-
    /**
     * Setup styles and events
     **/
    self._initilize = function() {
-
     self.windowWasResized();
     // Add click listener to start button 
     startButton.addEventListener('click', self.startGamePlay);
-
     // Add answer click listener
     for (var i = 0; i < buttonArray.length; i++) {
       buttonArray[i].addEventListener('click', self.anwerClicked, false);
     }
    };
-
    /**
     * Called everytime the window resizes to calculate new dimensions
     **/
@@ -283,12 +263,10 @@ var animationSetup = false;
     stage.style.height = (h -20) +'px';
     stage.style.width = (w - 20) + 'px';
    };
-
    /**
     * Setup the stage and fire off the stage animations
     **/
    self.startGamePlay = function() {
-
     // Get the game indexes
     self.generateGameIndexes();
  
@@ -297,12 +275,10 @@ var animationSetup = false;
     // Set the score to zero
     scoreSpan[0].textContent = actualScore;
     timerSpan[0].textContent = timerIndex;
-
     startAnimation.to([startButton, title], 1, {alpha:0});
     startAnimation.to([startButton, title], 0.1, {css:{display:'none'}});
     startAnimation.to([gameHeader, gameChoices], 0.1, {css:{display:'block'}, onComplete:self.fireOffGameLogic});
    };
-
    /**
     * Callback function from the startAnimation timeline above
     * This function starts the timer and plays the music at the same time
@@ -312,7 +288,6 @@ var animationSetup = false;
     gameMusic.currentTime = 0;
     gameMusic.play();
    }
-
    /**
     * This function rebuilds the UI with a new question and answer
     **/
@@ -355,13 +330,11 @@ var animationSetup = false;
     // Display updated time
     timerSpan[0].textContent = timerIndex;
    };
-
    /**
     * Determines if an answer is correct or incorrect
     * Displays a message to user and plays sound effect
     **/
    self.anwerClicked = function(e) {
-
     clearTimeout(timerObject);
     gameMusic.pause();
     gameMusic.currentTime = 0;
@@ -369,7 +342,6 @@ var animationSetup = false;
     var answerIndex = Number(e.target.getAttribute('data-index'));
     // Get the actual answer index 
     var actualCorrectAnswerIndex = gameAnswers[gameIndex];
-
     // Correct answer
     if (actualCorrectAnswerIndex == answerIndex) {
       rightAnswer.play();
@@ -384,7 +356,6 @@ var animationSetup = false;
       self.dispatch_modal('YOUR ANSWER IS: <span class="incorrect">INCORRECT!</span>', 1000);
     }
    }
-
    /**
     * This function generates random indexes to be used for our game logic
     * The indexes are used to assign questions and correct answers
@@ -402,26 +373,21 @@ var animationSetup = false;
       }
     }
    };
-
   /**
    *  Dispatches a modal window with a message to user
    */
    self.dispatch_modal = function(message, time) {
     window_width = window.innerWidth|| document.documentElement.clientWidth
                    || document.body.clientWidth;
-
     modal_window.getElementsByTagName('p')[0].innerHTML = message;
     modal_window.style.left = ((window_width / 2) - 150)+ 'px';
-
     self.fade_in(time, modal_window, true);
    };
-
   /**
    * Credit for the idea about fade_in and fade_out to Todd Motto
    * fade_in function emulates the fadeIn() jQuery function
    */
    self.fade_in = function(time, elem, flag) {
-
     var opacity = 0, interval = 50, 
     gap = interval / time, self = this;
       
@@ -444,7 +410,6 @@ var animationSetup = false;
     }
     var fading = window.setInterval(func, interval);
    },
-
   /**
    *  
    * Credit for the idea about fade_in and fade_out to Todd Motto
@@ -475,7 +440,6 @@ var animationSetup = false;
     }  
     var fading = window.setInterval(func, interval);
    };
-
    /**
     * Runs when the game ends
     * Displays a modal window with the option to tweet score or play again
@@ -490,10 +454,8 @@ var animationSetup = false;
     var insertedHTML = actualScoreHeader +'<div>' + tweetButton + playAgainButton + '</div>';
     modal_window.getElementsByTagName('div')[0].innerHTML = insertedHTML;
     modal_window.style.left = ((window_width / 2) - 150)+ 'px';
-
     self.fade_in(1000, modal_window, false);
    };
-
    /**
     * The tweets score function allows a user to post their score to twitter
     **/
@@ -510,10 +472,8 @@ var animationSetup = false;
     * This function acts as to reset all data from scratch
     **/
    self.resetGame = function() {
-
     modal_window.style.opacity = 0.0;
     modal_window.innerHTML = '<div class="modal_message"><p></p></div>';
-
     window.clearTimeout(timerObject);
     timerObject = undefined;
     gameIndex = 0;
@@ -532,27 +492,21 @@ var animationSetup = false;
     self.runTimer();
     gameMusic.currentTime = 0;
     gameMusic.play();
-
    };
-
    /**
     * Logging Function
     **/
    self.l = function(message) {
     console.log(message);
    };
-
    // Initialize the functionality of the controller
    self._initilize();
-
  } // End animationPipeline
-
  // Used to call the animationPipline function
  var interval = setInterval(function() {
   if(document.readyState === 'complete') {
     clearInterval(interval);
     var pipe = animationPipeline();
-
     window.onresize = function(event) {
       var pipe = animationPipeline()
     };
