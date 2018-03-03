@@ -315,7 +315,7 @@ var animationSetup = false;
    self.updateClock = function() {
     timerIndex--;
     if (timerIndex == -1) {
-      timerIndex = 5;
+      timerIndex = 3;
       gameIndex++;
     } 
  
@@ -324,7 +324,7 @@ var animationSetup = false;
       // end the game
       self.runEndOfGame();
       return;
-    } else if(timerIndex == 5){
+    } else if(timerIndex == 3){
       self.setupUserInterfaceWithData();
     }
     // Display updated time
