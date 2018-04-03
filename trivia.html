@@ -362,12 +362,12 @@ var animationSetup = false;
       actualScore += 10;
       scoreSpan[0].textContent = actualScore;
       cancelButtons = true;
-      self.dispatch_modal('YOUR ANSWER IS: <span class="correct">CORRECT!</span>', 400);
+      self.dispatch_modal('YOUR ANSWER IS: <span class="correct">CORRECT!</span>', 200);
     // Incorrect Answer
     } else {
       wrongAnser.play();
       cancelButtons = true;
-      self.dispatch_modal('YOUR ANSWER IS: <span class="incorrect">INCORRECT!</span>', 400);
+      self.dispatch_modal('YOUR ANSWER IS: <span class="incorrect">INCORRECT!</span>', 200);
     }
    }
 
@@ -383,7 +383,7 @@ var animationSetup = false;
         gameQuestions.push(randomNumber);
         gameAnswers.push(correctAnswers[randomNumber]);
       }
-      if (gameQuestions.length == 5) {
+      if (gameQuestions.length == 10) {
         breakFlag = true;
       }
     }
