@@ -463,14 +463,16 @@ var animationSetup = false;
   
     window_width = window.innerWidth|| document.documentElement.clientWidth
                    || document.body.clientWidth;
+    var tweetButton = '<button id="tweekScore" class="left twitter" onClick="self.tweetScore()">TWEET SCORE</button>';
     var playAgainButton = '<button id="playAgain" class="left" onClick="self.resetGame()">PLAY AGAIN</button>';
-    var actualScoreHeader = '<h2>YOUR FINAL SCORE IS: '+ actualScore + '</h2>';
-    var insertedHTML = actualScoreHeader +'<div>playAgainButton </div>';
+    var actualScoreHeader = '<h2>CONGRATS, YOUR FINAL SCORE IS: '+ actualScore + '</h2>';
+    var insertedHTML = actualScoreHeader +'<div>' + tweetButton + playAgainButton + '</div>';
     modal_window.getElementsByTagName('div')[0].innerHTML = insertedHTML;
     modal_window.style.left = ((window_width / 2) - 150)+ 'px';
 
     self.fade_in(1000, modal_window, false);
    };
+
 
    /**
     * The tweets score function allows a user to post their score to twitter
