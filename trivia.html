@@ -362,12 +362,12 @@ var animationSetup = false;
       actualScore += 10;
       scoreSpan[0].textContent = actualScore;
       cancelButtons = true;
-      self.dispatch_modal('YOUR ANSWER IS: <span class="correct">CORRECT!</span>', 200);
+      self.dispatch_modal('Your answer is: <span class="correct">Correct!</span>', 200);
     // Incorrect Answer
     } else {
       wrongAnser.play();
       cancelButtons = true;
-      self.dispatch_modal('YOUR ANSWER IS: <span class="incorrect">INCORRECT!</span>', 200);
+      self.dispatch_modal('Your answer is: <span class="incorrect">Incorrect!</span>', 200);
     }
    }
 
@@ -383,7 +383,7 @@ var animationSetup = false;
         gameQuestions.push(randomNumber);
         gameAnswers.push(correctAnswers[randomNumber]);
       }
-      if (gameQuestions.length == 10) {
+      if (gameQuestions.length == 5) {
         breakFlag = true;
       }
     }
@@ -441,7 +441,7 @@ var animationSetup = false;
         elem.style.display = 'none';
         gameIndex++;
         // Determine if we need to run another game loop
-        if (gameIndex != gameQuestions.length) {
+        if (gameIndex != '10') {
           timerIndex = 5;
           timerSpan[0].textContent = timerIndex
           self.setupUserInterfaceWithData();
@@ -465,8 +465,8 @@ var animationSetup = false;
                    || document.body.clientWidth;
     var tweetButton = '<button id="tweekScore" class="left twitter" onClick="self.tweetScore()">TWEET SCORE</button>';
     var playAgainButton = '<button id="playAgain" class="left" onClick="self.resetGame()">PLAY AGAIN</button>';
-    var actualScoreHeader = '<h2>CONGRATS, YOUR FINAL SCORE IS: '+ actualScore + '</h2>';
-    var insertedHTML = actualScoreHeader +'<div>' + tweetButton + playAgainButton + '</div>';
+    var actualScoreHeader = '<h2>Your Score: '+ actualScore + '</h2>';
+    var insertedHTML = actualScoreHeader +'<div>' + playAgainButton + '</div>';
     modal_window.getElementsByTagName('div')[0].innerHTML = insertedHTML;
     modal_window.style.left = ((window_width / 2) - 150)+ 'px';
 
