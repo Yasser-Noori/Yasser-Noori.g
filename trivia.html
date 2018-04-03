@@ -330,7 +330,7 @@ var animationSetup = false;
       gameIndex++;
     } 
  
-    if (gameIndex == '10') {
+    if (gameIndex == '5') {
       clearTimeout(timerObject);
       // end the game
       self.runEndOfGame();
@@ -441,7 +441,7 @@ var animationSetup = false;
         elem.style.display = 'none';
         gameIndex++;
         // Determine if we need to run another game loop
-        if (gameIndex != '10') {
+        if (gameIndex != '5') {
           timerIndex = 5;
           timerSpan[0].textContent = timerIndex
           self.setupUserInterfaceWithData();
