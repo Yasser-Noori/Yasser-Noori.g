@@ -30,17 +30,15 @@
         </style>
         <script>
 window.onload = function() {
-        window.focus();
+	document.getElementById("b1").addEventListener("click", previous);
+        document.getElementById("b2").addEventListener("click", next);
         var frameNumber = 0;
-
-        function next(){
-        frameNumber++;
-        }
-
-        function previous(){
-        frameNumber--;
-        }
-
+	function previous(){
+frameNumber--
+	}
+	function next(){
+frameNumber++
+	}
         if(frameNumber === 4){
         frameNumber - 4;
         }
@@ -69,10 +67,10 @@ window.onload = function() {
     </head>
     <body>
         <img id="frame" src="">
-        <button class="previous" onclick="previous()">
+        <button class="previous" id="b1">
             &laquo; Previous
         </button>
-        <button class="next" onclick="next()">
+        <button class="next" id="b2">
             Next &raquo;
         </button>
     </body>
